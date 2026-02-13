@@ -1,0 +1,55 @@
+/*Fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+}
+
+/*
+Home -> Container
+*/
+
+.header {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 75px;
+}
+.header .breadcrumb a {
+    text-decoration: none;
+    color: black;
+}
+.header .breadcrumb span {
+    margin-right: 10px;
+}
+
+.container {
+    height: 70vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 50px;
+}
+
+.container .about {
+}
+.container .blog-listings {
+    overflow-y: scroll;
+    max-height: 100%;
+}
+.container .blog-listings .blog-post {
+    border: solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+@media (max-width: 600px) {
+    .header {
+        width: 90%;
+    }
+    .container {
+        width: 90%;
+        flex-direction: column;
+    }
+}

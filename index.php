@@ -1,7 +1,9 @@
 <?php 
 
-require_once __DIR__ . "/app/core/config.inc.php";
+require_once __DIR__ . "/app/config/config.inc.php";
 require_once __DIR__ . "/app/core/database.inc.php";
+
+$conn = new Database($host, $table, $user, $password);
 
 
 if(isset($_GET['url'])){
