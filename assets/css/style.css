@@ -31,6 +31,7 @@ Home -> Container
     display: flex;
     gap: 50px;
 }
+
 .container .about {
 }
 .container .blog-listings {
@@ -42,6 +43,7 @@ Home -> Container
     padding: 10px;
     margin: 10px;
 }
+
 @media (max-width: 600px) {
     .header {
         width: 90%;

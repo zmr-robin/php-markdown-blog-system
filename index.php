@@ -2,9 +2,10 @@
 
 require_once __DIR__ . "/app/config/config.inc.php";
 require_once __DIR__ . "/app/core/database.inc.php";
+require_once __DIR__ . "/app/core/blog.inc.php";
 
 $conn = new Database($host, $table, $user, $password);
-
+$blog = new Blog($conn);
 
 if(isset($_GET['url'])){
     $pagePath = './app/pages/' . $_GET['url'] . '.php';
@@ -12,7 +13,7 @@ if(isset($_GET['url'])){
         require_once($pagePath);
     } elseif(str_contains($_GET['url'], "blog/")){
         $_GET['url'] = str_replace("blog/", "", $_GET['url']);
-        require_once('./app/pages/blog-post.php');
+        require_once('./app/pages/blog.php');
         echo $_GET['url'];
     } else {
         header('Location: ./404');

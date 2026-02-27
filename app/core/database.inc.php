@@ -1,21 +1,24 @@
 <?php
 
 class Database{
-    public $host = "";
-    public $table = "";
-    public $user = "";
-    public $password = "";
+    public $dbh;
 
     function __construct($host, $table, $user, $password){
-        $this->host = $host;
-        $this->table = $table;
-        $this->user = $user;
-        $this->password = $password;
         try {
-            $this->dbh = new PDO("mysql:host=$this->host;dbname=$this->table", $this->user, $this->password);
+            $this->dbh = new PDO("mysql:host=$host;dbname=$table", $user, $password);
         } catch (PDOException $e) {
             header("Location: ./503");
             exit;
         }
     } 
+
+    function signup($userName, $userPass){
+        $this->dbh->prepare();
+    }
+    function login($userName, $userPass) {
+
+    }
+    private function hashPass($userPass) {
+
+    }
 }

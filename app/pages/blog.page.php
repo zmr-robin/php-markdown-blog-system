@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMBS - Example Blog #1</title>
+
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>PMBS</h1>
+        <div class="breadcrumb">
+            <p>><span><a href="./index.html">Home</a></span>><span><a href="">Blog</a></span>><span><a href="">Example Blog #1</a></span></p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <h1>Hello World</h1><p><b>Lorem ipsum</b> dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorems ipsum dolor sit amet. <mark>Lorem ipsum dolor sit amet</mark>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p><hr><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod <i>tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</i> Stet clita kasd gubergren, no sea takimata <a href='http://example.com/'>sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor</a> sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam <a href='https://example.com/'>erat, sed diam</a> voluptua. At vero eos et accusam et justo duo <u>dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</u></p><hr><img src='https://placecats.com/300/200' alt='A Cat'/><hr><ul><li>Lorem Ipsum</li><li>Eirmod tempor invidunt</li><ul><li>et ea rebum</li><li>set <a href='https://example.com/'>clita kasd</a> gubergren</li></ul><li>diam lorem num</li></ul><hr><ol><li value='1'>Test1</li><li value='2'>Test3</li><ol><li value='1'>Test4</li><li value='2'>Test5</li></ol><li value='3'>Test6</li><ul><li>Test 7</li><li>Test 8</li></ul></ol><h2>Hello World 2</h2><p><a href='https://example.com/'>Lorem ipsum</a> dolor sit amet, consetetur sadipscing elitr, sed diam </p><blockquote> Robin Z.</blockquote>
+        </div>
+    </div>
+
+</body>
+</html>
