@@ -13,8 +13,7 @@ if(isset($_GET['url'])){
         require_once($pagePath);
     } elseif(str_contains($_GET['url'], "blog/")){
         $_GET['url'] = str_replace("blog/", "", $_GET['url']);
-        require_once('./app/pages/blog.php');
-        echo $_GET['url'];
+        require_once('./app/pages/blog.page.php');
     } else {
         header('Location: ./404');
     }

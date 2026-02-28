@@ -24,11 +24,11 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi molestias, nisi quia nesciunt illo incidunt ut non dolor nemo ea, deleniti eaque sequi neque quidem, laboriosam deserunt fugiat possimus odio!</p>
         </div>
         <div class="blog-listings">
-            <div class="blog-post">
+            <!-- Dummy <div class="blog-post">
                 <h2>Example Blog #1</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis necessitatibus accusantium at obcaecati laborum quidem explicabo saepe. Aliquam atque earum quae quia sapiente, reprehenderit, iure aspernatur error, suscipit tenetur nihil?</p>
                 <p><a href="blog.html">Read more...</a></p>
-            </div>
+            </div> -->
             <?php
 
             $results = $blog->getAll();
@@ -38,7 +38,7 @@
                 echo "
                 <div class='blog-post'>
                     <h2>" . $result['PostTitle'] . "</h2>
-                    <p>" . substr($result['PostContent'],0,$postContent ) . "</p>
+                    <p>" . $blog->getPostDescription($result["PostContent"]) . "</p>
                     <p><a href='{$siteURL}blog\\" . $result['PostURL'] . "'>Read more...</a></p>
                 </div>
                 ";
