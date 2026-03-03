@@ -60,7 +60,30 @@
                             <button>Archive</button>
                         </div>
                     </div>
+                    
+                    <?php
+
+                    $results = $blog->getAll();
+
+                    foreach($results as $result){
+                        $postContent=strpos($result['PostContent'], ' ', 200);
+                        echo '
                     <div class="blog-post">
+                        <div class="blog-name-stats">
+                            <h3>' . $result['PostTitle'] . '<span>/<i> Views: 100</i></span></h3>
+                        </div>
+                        <div class="blog-controlls">
+                            <a href="'. $siteURL . $result['PostURL'] . '"><button>View</button></a>
+                            <a href="'. $siteURL . 'pmbs?edit=' . $result['PostID'] . '"><button>Edit</button></a>
+                            <a href="'. $siteURL . 'pmbs?archive=' . $result['PostID'] . '"><button>Archive</button></a>
+                        </div>
+                    </div>
+                        ';
+                    }
+        
+
+            ?>
+                    <!-- <div class="blog-post">
                         <div class="blog-name-stats">
                             <h3>Example 1 <span>/<i> Views: 100</i></span></h3>
                         </div>
@@ -129,7 +152,7 @@
                             <button>Edit</button>
                             <button>Archive</button>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="blog-post-settings" style="display: none;">
