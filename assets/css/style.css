@@ -99,9 +99,12 @@ Home -> Container
 }
 .blog-overview .blog-post .blog-controlls button {
     height: 100%;
-    width: 50%;
+    width: 100%;
     border: 1px solid;
     background: transparent;
+}
+.blog-overview .blog-post .blog-controlls a {
+    width: 50%;
 }
 .blog-overview .blog-tree .blog-name-stats span {
     margin-left: 10px;

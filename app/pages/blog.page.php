@@ -1,3 +1,7 @@
+<?php
+require_once __DIR__ . "/../elements/breadcrumb.php";
+$blogData = $blog->getPostDataByURL($_GET["url"], $siteURL);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +13,10 @@
 </head>
 <body>
 
-    <div class="header">
-        <h1>PMBS</h1>
-        <div class="breadcrumb">
-            <p>><span><a href="./index.html">Home</a></span>><span><a href="">Blog</a></span>><span><a href="">Example Blog #1</a></span></p>
-        </div>
-    </div>
-
+    <?= breadcrumb($siteURL , $blogData["PostTitle"], $blogData["PostURL"]) ?>
     <div class="container">
         <div class="content">
             <?php
-            $blogData = $blog->getPostDataByURL($_GET["url"]);
             echo $blogData["PostContent"];
             ?>
         </div>

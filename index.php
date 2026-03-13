@@ -1,11 +1,21 @@
 <?php 
 
+session_start();
+
+// Require Composer autoload
+require_once __DIR__ . "/vendor/autoload.php";
+
 require_once __DIR__ . "/app/config/config.inc.php";
 require_once __DIR__ . "/app/core/database.inc.php";
 require_once __DIR__ . "/app/core/blog.inc.php";
+require_once __DIR__ . "/app/core/pmbs.inc.php";
+require_once __DIR__ . "/app/core/phpmarkdown.php";
+require_once __DIR__ . "/app/core/user.inc.php";
 
-$conn = new Database($host, $table, $user, $password);
-$blog = new Blog($conn);
+$conn = new Database($host, $table, $user, $pass);
+$blog = new Blog($conn, $siteURL);
+$pmbs = new PMBS($conn);
+$user = new User($conn, $siteURL);
 
 if(isset($_GET['url'])){
     $pagePath = './app/pages/' . $_GET['url'] . '.php';

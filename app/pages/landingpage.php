@@ -19,8 +19,8 @@
     <div class="container">
         <div class="about">
             <h2>About PMBS</h2>
-            <p>Open source blogging system based on PHP - converting markdown files to HTML blog pages.</p>
-            <p>The Markdown conversion to HTML is done by my libary "<a href="https://github.com/zmr-robin/php-markdown">php-markdown</a>"</p>
+            <p>Blog system based on PHP - converting markdown files to HTML blog pages.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illum deleniti illo sint maiores dicta delectus ad veritatis unde possimus eos amet autem, minima eius nam corporis quam tempore culpa consequuntur.</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi molestias, nisi quia nesciunt illo incidunt ut non dolor nemo ea, deleniti eaque sequi neque quidem, laboriosam deserunt fugiat possimus odio!</p>
         </div>
         <div class="blog-listings">
@@ -33,8 +33,7 @@
 
             $results = $blog->getAll();
 
-            foreach($results as $result){
-                $postContent=strpos($result['PostContent'], ' ', 200);
+            foreach ($results as $result) {
                 echo "
                 <div class='blog-post'>
                     <h2>" . $result['PostTitle'] . "</h2>

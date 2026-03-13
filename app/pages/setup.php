@@ -1,22 +1,26 @@
+<?php
+if(!file_exists(__DIR__ . "/../core/first.txt")){
+    header("Location: {$siteURL}login");
+}
+if(isset($_POST["userName"]) && isset($_POST["userPassword"]) && isset($_POST["userPasswordRepeat"])){
+    $user->create();
+} 
+require_once __DIR__ . "/../elements/breadcrumb.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PMBS - setup</title>
+    <title>PMBS - Setup</title>
 
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
 
-    <div class="header">
-        <h1>PMBS</h1>
-        <div class="breadcrumb">
-            <p>><span><a href="./index.html">Home</a></span>> <span><a href="">pmbs</a></span></p>
-        </div>
-    </div>
+    <?= breadcrumb($siteURL , "Setup", "setup") ?>
 
     <div class="container">
         <div class="setup">
